@@ -40,8 +40,9 @@ Do uruchomienia gry wymagany jest zainstalowany **Python 3.8+** oraz menedżer p
 1. Sklonuj repozytorium lub pobierz paczkę ZIP z projektem.
 2. Otwórz terminal/konsolę w głównym folderze projektu.
 3. Zainstaluj bibliotekę Pygame (zalecana wersja `pygame-ce`):
-   ```bash
-   pip install pygame
+```bash
+pip install pygame
+```
 Uruchom grę:
 python main.py
 
