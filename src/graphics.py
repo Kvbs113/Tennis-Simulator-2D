@@ -13,9 +13,9 @@ def get_menu_background():
     global MENU_BG_IMG, MENU_BG_LOADED
     if not MENU_BG_LOADED:
         MENU_BG_LOADED = True
-        if os.path.exists("menu_bg.png"):
+        if os.path.exists("assets/images/menu_bg.png"):
             try:
-                raw = pygame.image.load("menu_bg.png").convert()
+                raw = pygame.image.load("assets/images/menu_bg.png").convert()
                 MENU_BG_IMG = pygame.transform.smoothscale(raw, (WIDTH, HEIGHT))
             except Exception:
                 pass
