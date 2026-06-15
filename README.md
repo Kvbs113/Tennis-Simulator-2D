@@ -48,32 +48,34 @@ pip install pygame
 python main.py
 ```
 ## Struktura Projektu
-* *main.py – Główny plik startowy zarządzający pętlą gry i przełączaniem ekranów.
+* main.py – Główny plik startowy zarządzający pętlą gry i przełączaniem ekranów.
 
-entities.py – Logika obiektów: fizyka piłki (Ball), ruch gracza (Player) oraz system animacji rakiet (RacketAnim).
+* entities.py – Logika obiektów: fizyka piłki (Ball), ruch gracza (Player) oraz system animacji rakiet (RacketAnim).
 
-match.py – Silnik sędziowski liczący punkty, gemy, sety oraz obsługujący tie-breaki zgodnie z oficjalnymi zasadami tenisa.
+* match.py – Silnik sędziowski liczący punkty, gemy, sety oraz obsługujący tie-breaki zgodnie z oficjalnymi zasadami tenisa.
 
-graphics.py – Odpowiada za renderowanie interfejsu HUD, menu, rzutowanie perspektywy kortu oraz rysowanie siatki.
+* graphics.py – Odpowiada za renderowanie interfejsu HUD, menu, rzutowanie perspektywy kortu oraz rysowanie siatki.
 
-settings.py – Globalne stałe konfiguracyjne, parametry trudności AI oraz statystyki postaci.
+* settings.py – Globalne stałe konfiguracyjne, parametry trudności AI oraz statystyki postaci.
 
-utils.py – Funkcje pomocnicze do rzutowania 3D na przestrzeń ekranu 2D.
+* utils.py – Funkcje pomocnicze do rzutowania 3D na przestrzeń ekranu 2D.
 
-docs/ – Folder zawierający kompletną konfigurację i wygenerowaną dokumentację Sphinx.
-Dokumentacja Sphinx (UML)
+* docs/ – Folder zawierający kompletną konfigurację i wygenerowaną dokumentację Sphinx.
+## Dokumentacja Sphinx (UML)
 Projekt posiada w pełni skonfigurowany system generowania dokumentacji technicznej z komentarzy w kodzie.
 
 Aby wygenerować lub zaktualizować dokumentację HTML oraz automatyczne diagramy klas (wymaga zainstalowanego programu Graphviz w systemie):
 
-Przejdź do folderu docs:
+1. Przejdź do folderu docs:
 
-Bash
+```bash
 cd docs
-Wybuduj pliki HTML:
+```
 
-Windows (PowerShell): .\make.bat html
+2. Wybuduj pliki HTML:
 
-Linux / macOS: make html
+* Windows (PowerShell): .\make.bat html
 
-Gotową dokumentację znajdziesz w folderze docs/build/html/index.html. Otwórz plik w dowolnej przeglądarce internetowej.
+* Linux / macOS: make html
+
+3. Gotową dokumentację znajdziesz w folderze docs/build/html/index.html. Otwórz plik w dowolnej przeglądarce internetowej.
