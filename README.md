@@ -1,10 +1,10 @@
-# Tennis Simulator 🎾
+# Tennis Simulator 
 
 **Tennis Simulator** to retro-arkadowa gra sportowa 2D z elementami perspektywy 3D, napisana w języku Python przy użyciu biblioteki **Pygame**. Gra łączy klasyczną rozgrywkę tenisową z nowoczesnymi mechanikami, takimi jak unikalne superumiejętności postaci (Ulty), zróżnicowane statystyki zawodników oraz zaawansowany model fizyki piłki (uwzględniający wysokość, opór powietrza oraz rotację).
 
 ---
 
-## 🌟 Kluczowe Funkcje
+##  Kluczowe Funkcje
 
 * **Zaawansowana Fizyka Piłki:** Symulacja lotu piłki w trzech wymiarach (X, Y oraz wysokość Z) z uwzględnieniem grawitacji, oporu powietrza, cieniowania oraz mechaniki nadawania rotacji (*spin*).
 * **4 Grywalne Postacie:** * *Nowicjusz* (Ult: Nietykalność – ignoruje błędy)
@@ -18,7 +18,7 @@
 
 ---
 
-## 🎮 Sterowanie
+##  Sterowanie
 
 | Klawisz | Akcja |
 | :--- | :--- |
@@ -31,7 +31,7 @@
 
 ---
 
-## 🛠️ Instalacja i Uruchomienie
+##  Instalacja i Uruchomienie
 
 ### Wymagania
 Do uruchomienia gry wymagany jest zainstalowany **Python 3.8+** oraz menedżer pakietów **pip**.
@@ -40,5 +40,5 @@ Do uruchomienia gry wymagany jest zainstalowany **Python 3.8+** oraz menedżer p
 1. Sklonuj repozytorium lub pobierz paczkę ZIP z projektem.
 2. Otwórz terminal/konsolę w głównym folderze projektu.
 3. Zainstaluj bibliotekę Pygame (zalecana wersja `pygame-ce`):
-   ```bash
-   pip install pygame
+```bash
+pip install pygame
