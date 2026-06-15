@@ -44,8 +44,9 @@ Do uruchomienia gry wymagany jest zainstalowany **Python 3.8+** oraz menedżer p
 pip install pygame
 ```
 Uruchom grę:
+```bash
 python main.py
-
+```
 main.py – Główny plik startowy zarządzający pętlą gry i przełączaniem ekranów.
 
 entities.py – Logika obiektów: fizyka piłki (Ball), ruch gracza (Player) oraz system animacji rakiet (RacketAnim).
