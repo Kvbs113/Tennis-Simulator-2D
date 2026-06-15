@@ -52,9 +52,9 @@ def run_game(screen, clock, diff_key, char_key, sets_to_win=None, tournament=Fal
                     image_path=ai_img, racket_image_path=ai_racket_img)
 
     bg_image = None
-    if os.path.exists("court.png"):
+    if os.path.exists("assets/images/court.png"):
         try:
-            raw_bg   = pygame.image.load("court.png").convert()
+            raw_bg   = pygame.image.load("assets/images/court.png").convert()
             bg_image = pygame.transform.smoothscale(raw_bg, (WIDTH, HEIGHT))
         except Exception:
             pass
