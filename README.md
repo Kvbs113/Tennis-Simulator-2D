@@ -40,8 +40,9 @@ Do uruchomienia gry wymagany jest zainstalowany **Python 3.8+** oraz menedżer p
 1. Sklonuj repozytorium lub pobierz paczkę ZIP z projektem.
 2. Otwórz terminal/konsolę w głównym folderze projektu.
 3. Zainstaluj bibliotekę Pygame (zalecana wersja `pygame-ce`):
-```bash
-pip install pygame
+   ```bash
+   pip install pygame
+Uruchom grę:
 python main.py
 
 main.py – Główny plik startowy zarządzający pętlą gry i przełączaniem ekranów.
@@ -57,3 +58,19 @@ settings.py – Globalne stałe konfiguracyjne, parametry trudności AI oraz sta
 utils.py – Funkcje pomocnicze do rzutowania 3D na przestrzeń ekranu 2D.
 
 docs/ – Folder zawierający kompletną konfigurację i wygenerowaną dokumentację Sphinx.
+Dokumentacja Sphinx (UML)
+Projekt posiada w pełni skonfigurowany system generowania dokumentacji technicznej z komentarzy w kodzie.
+
+Aby wygenerować lub zaktualizować dokumentację HTML oraz automatyczne diagramy klas (wymaga zainstalowanego programu Graphviz w systemie):
+
+Przejdź do folderu docs:
+
+Bash
+cd docs
+Wybuduj pliki HTML:
+
+Windows (PowerShell): .\make.bat html
+
+Linux / macOS: make html
+
+Gotową dokumentację znajdziesz w folderze docs/build/html/index.html. Otwórz plik w dowolnej przeglądarce internetowej.
