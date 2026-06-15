@@ -7,7 +7,8 @@
 ##  Kluczowe Funkcje
 
 * **Zaawansowana Fizyka Piłki:** Symulacja lotu piłki w trzech wymiarach (X, Y oraz wysokość Z) z uwzględnieniem grawitacji, oporu powietrza, cieniowania oraz mechaniki nadawania rotacji (*spin*).
-* **4 Grywalne Postacie:** * Nowicjusz* (Ult: Nietykalność – ignoruje błędy)
+* **4 Grywalne Postacie:
+* ** * Nowicjusz* (Ult: Nietykalność – ignoruje błędy)
     * *Amator* (Ult: Nitro – potężny bonus do prędkości biegu)
     * *Pro* (Ult: Dotlenienie – zwiększona dynamika)
     * *Mistrz* (Ult: Polska gurom – potrójny zasięg odbicia piłki)
