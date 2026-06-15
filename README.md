@@ -65,7 +65,13 @@ python main.py
 ## Dokumentacja Sphinx (UML)
 Projekt posiada w pełni skonfigurowany system generowania dokumentacji technicznej z komentarzy w kodzie.
 
-Aby wygenerować lub zaktualizować dokumentację HTML oraz automatyczne diagramy klas (wymaga zainstalowanego programu Graphviz w systemie):
+### Diagram Klas UML
+Poniżej znajduje się wygenerowany automatycznie schemat architektury kodu, uwzględniający zależności, metody oraz atrybuty klas:
+
+![Diagram Klas UML](docs/source/classes.png)
+
+### Generowanie dokumentacji
+Aby wygenerować lub zaktualizować dokumentację HTML (wymaga zainstalowanego programu Graphviz w systemie):
 
 1. Przejdź do folderu docs:
 
