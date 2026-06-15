@@ -47,7 +47,8 @@ pip install pygame
 ```bash
 python main.py
 ```
-main.py – Główny plik startowy zarządzający pętlą gry i przełączaniem ekranów.
+## Struktura Projektu
+* *main.py – Główny plik startowy zarządzający pętlą gry i przełączaniem ekranów.
 
 entities.py – Logika obiektów: fizyka piłki (Ball), ruch gracza (Player) oraz system animacji rakiet (RacketAnim).
 
