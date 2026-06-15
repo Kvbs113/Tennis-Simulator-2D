@@ -42,5 +42,18 @@ Do uruchomienia gry wymagany jest zainstalowany **Python 3.8+** oraz menedżer p
 3. Zainstaluj bibliotekę Pygame (zalecana wersja `pygame-ce`):
 ```bash
 pip install pygame
-
 python main.py
+
+main.py – Główny plik startowy zarządzający pętlą gry i przełączaniem ekranów.
+
+entities.py – Logika obiektów: fizyka piłki (Ball), ruch gracza (Player) oraz system animacji rakiet (RacketAnim).
+
+match.py – Silnik sędziowski liczący punkty, gemy, sety oraz obsługujący tie-breaki zgodnie z oficjalnymi zasadami tenisa.
+
+graphics.py – Odpowiada za renderowanie interfejsu HUD, menu, rzutowanie perspektywy kortu oraz rysowanie siatki.
+
+settings.py – Globalne stałe konfiguracyjne, parametry trudności AI oraz statystyki postaci.
+
+utils.py – Funkcje pomocnicze do rzutowania 3D na przestrzeń ekranu 2D.
+
+docs/ – Folder zawierający kompletną konfigurację i wygenerowaną dokumentację Sphinx.
