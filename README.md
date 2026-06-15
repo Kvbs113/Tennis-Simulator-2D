@@ -43,7 +43,7 @@ Do uruchomienia gry wymagany jest zainstalowany **Python 3.8+** oraz menedżer p
 ```bash
 pip install pygame
 ```
-Uruchom grę:
+### Uruchom grę:
 ```bash
 python main.py
 ```
