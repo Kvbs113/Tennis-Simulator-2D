@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="pl" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>entities module &mdash; Tennis Simulator 1.0 - dokumentacja</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=331e28ce"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=2827c288"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="graphics module" href="graphics.html" />
+    <link rel="prev" title="Tennis" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tennis Simulator
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Szukaj" aria-label="Szukaj" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Tennis</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">entities module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#entities.Ball"><code class="docutils literal notranslate"><span class="pre">Ball</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#entities.Ball.draw_ball"><code class="docutils literal notranslate"><span class="pre">Ball.draw_ball()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#entities.Ball.draw_shadow"><code class="docutils literal notranslate"><span class="pre">Ball.draw_shadow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#entities.Ball.execute_serve"><code class="docutils literal notranslate"><span class="pre">Ball.execute_serve()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#entities.Ball.hit"><code class="docutils literal notranslate"><span class="pre">Ball.hit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#entities.Ball.reset"><code class="docutils literal notranslate"><span class="pre">Ball.reset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#entities.Ball.start_toss"><code class="docutils literal notranslate"><span class="pre">Ball.start_toss()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#entities.Ball.update"><code class="docutils literal notranslate"><span class="pre">Ball.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#entities.Player"><code class="docutils literal notranslate"><span class="pre">Player</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#entities.Player.activate_ult"><code class="docutils literal notranslate"><span class="pre">Player.activate_ult()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#entities.Player.draw"><code class="docutils literal notranslate"><span class="pre">Player.draw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#entities.Player.move"><code class="docutils literal notranslate"><span class="pre">Player.move()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#entities.Player.move_ai"><code class="docutils literal notranslate"><span class="pre">Player.move_ai()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#entities.Player.update_ult"><code class="docutils literal notranslate"><span class="pre">Player.update_ult()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#entities.RacketAnim"><code class="docutils literal notranslate"><span class="pre">RacketAnim</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#entities.RacketAnim.draw"><code class="docutils literal notranslate"><span class="pre">RacketAnim.draw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#entities.RacketAnim.trigger_hit"><code class="docutils literal notranslate"><span class="pre">RacketAnim.trigger_hit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#entities.RacketAnim.trigger_serve_swing"><code class="docutils literal notranslate"><span class="pre">RacketAnim.trigger_serve_swing()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#entities.RacketAnim.trigger_serve_toss"><code class="docutils literal notranslate"><span class="pre">RacketAnim.trigger_serve_toss()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#entities.RacketAnim.update"><code class="docutils literal notranslate"><span class="pre">RacketAnim.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#diagram-klas">Diagram Klas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="graphics.html">graphics module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="match.html">match module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="match.html#diagram-klas">Diagram Klas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">settings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">utils module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tennis Simulator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Tennis</a></li>
+      <li class="breadcrumb-item active">entities module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/entities.rst.txt" rel="nofollow"> Zobacz źródło strony</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-entities">
+<span id="entities-module"></span><h1>entities module<a class="headerlink" href="#module-entities" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="entities.Ball">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">entities.</span></span><span class="sig-name descname"><span class="pre">Ball</span></span><a class="reference internal" href="_modules/entities.html#Ball"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.Ball" title="Link to this definition"></a></dt>
+<dd><p>Klasy bazowe: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.Ball.draw_ball">
+<span class="sig-name descname"><span class="pre">draw_ball</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#Ball.draw_ball"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.Ball.draw_ball" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.Ball.draw_shadow">
+<span class="sig-name descname"><span class="pre">draw_shadow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#Ball.draw_shadow"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.Ball.draw_shadow" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.Ball.execute_serve">
+<span class="sig-name descname"><span class="pre">execute_serve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server_is_player</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_box</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_power</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#Ball.execute_serve"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.Ball.execute_serve" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.Ball.hit">
+<span class="sig-name descname"><span class="pre">hit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hitter_wx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hitter_wy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hitter_is_player</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#Ball.hit"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.Ball.hit" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.Ball.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#Ball.reset"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.Ball.reset" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.Ball.start_toss">
+<span class="sig-name descname"><span class="pre">start_toss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#Ball.start_toss"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.Ball.start_toss" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.Ball.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#Ball.update"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.Ball.update" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="entities.Player">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">entities.</span></span><span class="sig-name descname"><span class="pre">Player</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">char</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">racket_image_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_ai</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ai_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.009</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#Player"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.Player" title="Link to this definition"></a></dt>
+<dd><p>Klasy bazowe: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Logiczna klasa przetrzymująca stan i statystyki podmiotu gracza.
+Zarządza m.in. aktywowaniem buffów, prędkością, renderingiem ciała i rakietą.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.Player.activate_ult">
+<span class="sig-name descname"><span class="pre">activate_ult</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#Player.activate_ult"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.Player.activate_ult" title="Link to this definition"></a></dt>
+<dd><p>Sprawdza stan gotowości i aktywuje unikatową umiejętność gracza.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.Player.draw">
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#Player.draw"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.Player.draw" title="Link to this definition"></a></dt>
+<dd><p>Renderuje postać, cień i zarządza rysowaniem przypisanej animacji rakiety.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.Player.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#Player.move"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.Player.move" title="Link to this definition"></a></dt>
+<dd><p>Przemieszcza gracza na podstawie wejścia.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.Player.move_ai">
+<span class="sig-name descname"><span class="pre">move_ai</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ddx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ddy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#Player.move_ai"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.Player.move_ai" title="Link to this definition"></a></dt>
+<dd><p>Przemieszcza AI na podstawie wejścia z logiki bota.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.Player.update_ult">
+<span class="sig-name descname"><span class="pre">update_ult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#Player.update_ult"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.Player.update_ult" title="Link to this definition"></a></dt>
+<dd><p>Przelicza licznik czasu trwania ultów oraz czas odnowienia po użyciu.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="entities.RacketAnim">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">entities.</span></span><span class="sig-name descname"><span class="pre">RacketAnim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is_ai</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#RacketAnim"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.RacketAnim" title="Link to this definition"></a></dt>
+<dd><p>Klasy bazowe: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Obsługuje animację rakiety tenisowej w czasie.
+Wyświetla wyłącznie poprawnie załadowane tekstury graficzne.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.RacketAnim.draw">
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hand_x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hand_y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#RacketAnim.draw"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.RacketAnim.draw" title="Link to this definition"></a></dt>
+<dd><p>Wyświetla model na ekranie.
+Jeśli plik PNG z obrazkiem rakiety nie załadował się poprawnie, funkcja nie robi nic.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.RacketAnim.trigger_hit">
+<span class="sig-name descname"><span class="pre">trigger_hit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#RacketAnim.trigger_hit"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.RacketAnim.trigger_hit" title="Link to this definition"></a></dt>
+<dd><p>Zaczyna animację zwykłego odbicia.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.RacketAnim.trigger_serve_swing">
+<span class="sig-name descname"><span class="pre">trigger_serve_swing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#RacketAnim.trigger_serve_swing"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.RacketAnim.trigger_serve_swing" title="Link to this definition"></a></dt>
+<dd><p>Zaczyna wymach i uderzenie po podrzucie do serwu.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.RacketAnim.trigger_serve_toss">
+<span class="sig-name descname"><span class="pre">trigger_serve_toss</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#RacketAnim.trigger_serve_toss"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.RacketAnim.trigger_serve_toss" title="Link to this definition"></a></dt>
+<dd><p>Zaczyna animację podrzutu przy serwie.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="entities.RacketAnim.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/entities.html#RacketAnim.update"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#entities.RacketAnim.update" title="Link to this definition"></a></dt>
+<dd><p>Oblicza upływ czasu i przypisuje nowy stan rotacji dla rakiety.
+Wywoływane w każdej klatce przed rysowaniem.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="diagram-klas">
+<h1>Diagram Klas<a class="headerlink" href="#diagram-klas" title="Link to this heading"></a></h1>
+<div class="graphviz"><object data="_images/inheritance-de666e2e0f98b46888b954c9e0a5c0ccb05b11f6.svg" type="image/svg+xml" class="inheritance graphviz">
+<p class="warning">Inheritance diagram of entities</p></object></div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="Tennis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Poprzedni</a>
+        <a href="graphics.html" class="btn btn-neutral float-right" title="graphics module" accesskey="n" rel="next">Następny <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Prawa zastrzeżone 2026, Jakub Litwinski.</p>
+  </div>
+
+  Zbudowano w <a href="https://www.sphinx-doc.org/">Sphinx</a> używając
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    dostarczone przez <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

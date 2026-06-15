@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="pl" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>graphics module &mdash; Tennis Simulator 1.0 - dokumentacja</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=331e28ce"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=2827c288"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="main module" href="main.html" />
+    <link rel="prev" title="entities module" href="entities.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tennis Simulator
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Szukaj" aria-label="Szukaj" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Tennis</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="entities.html">entities module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entities.html#diagram-klas">Diagram Klas</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">graphics module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#graphics.draw_char_select"><code class="docutils literal notranslate"><span class="pre">draw_char_select()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graphics.draw_court"><code class="docutils literal notranslate"><span class="pre">draw_court()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graphics.draw_match_end"><code class="docutils literal notranslate"><span class="pre">draw_match_end()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graphics.draw_menu"><code class="docutils literal notranslate"><span class="pre">draw_menu()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graphics.draw_mode_select"><code class="docutils literal notranslate"><span class="pre">draw_mode_select()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graphics.draw_net"><code class="docutils literal notranslate"><span class="pre">draw_net()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graphics.draw_serve_indicator"><code class="docutils literal notranslate"><span class="pre">draw_serve_indicator()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graphics.draw_service_box"><code class="docutils literal notranslate"><span class="pre">draw_service_box()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graphics.draw_shared_background"><code class="docutils literal notranslate"><span class="pre">draw_shared_background()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graphics.draw_stat_bar"><code class="docutils literal notranslate"><span class="pre">draw_stat_bar()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graphics.draw_tournament_bracket"><code class="docutils literal notranslate"><span class="pre">draw_tournament_bracket()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graphics.draw_tournament_champion"><code class="docutils literal notranslate"><span class="pre">draw_tournament_champion()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graphics.draw_tournament_eliminated"><code class="docutils literal notranslate"><span class="pre">draw_tournament_eliminated()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graphics.get_menu_background"><code class="docutils literal notranslate"><span class="pre">get_menu_background()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="match.html">match module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="match.html#diagram-klas">Diagram Klas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">settings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">utils module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tennis Simulator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Tennis</a></li>
+      <li class="breadcrumb-item active">graphics module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/graphics.rst.txt" rel="nofollow"> Zobacz źródło strony</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-graphics">
+<span id="graphics-module"></span><h1>graphics module<a class="headerlink" href="#module-graphics" title="Link to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="graphics.draw_char_select">
+<span class="sig-prename descclassname"><span class="pre">graphics.</span></span><span class="sig-name descname"><span class="pre">draw_char_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clock</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sel_char</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/graphics.html#draw_char_select"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#graphics.draw_char_select" title="Link to this definition"></a></dt>
+<dd><p>Renderuje pętlę menu wyboru postaci i obsługuje wejście.</p>
+<dl class="simple">
+<dt>Zwraca:</dt><dd><p>Wybraną postać jako string lub «BACK» jeśli wciśnięto ESC.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="graphics.draw_court">
+<span class="sig-prename descclassname"><span class="pre">graphics.</span></span><span class="sig-name descname"><span class="pre">draw_court</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bg_image</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/graphics.html#draw_court"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#graphics.draw_court" title="Link to this definition"></a></dt>
+<dd><p>Rysuje płaszczyznę kortu z poprawnym rzutowaniem perspektywicznym.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="graphics.draw_match_end">
+<span class="sig-prename descclassname"><span class="pre">graphics.</span></span><span class="sig-name descname"><span class="pre">draw_match_end</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diff_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">char_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tournament</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">round_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/graphics.html#draw_match_end"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#graphics.draw_match_end" title="Link to this definition"></a></dt>
+<dd><p>Wyświetla panel punktowy nałożony na kort (overlay) po skończonym meczu. Pokazuje sumaryczny wynik setów.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="graphics.draw_menu">
+<span class="sig-prename descclassname"><span class="pre">graphics.</span></span><span class="sig-name descname"><span class="pre">draw_menu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clock</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sel_diff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/graphics.html#draw_menu"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#graphics.draw_menu" title="Link to this definition"></a></dt>
+<dd><p>Renderuje menu wyboru stopnia trudności gry.</p>
+<dl class="simple">
+<dt>Zwraca:</dt><dd><p>Wybrany poziom jako string (klucz słownika).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="graphics.draw_mode_select">
+<span class="sig-prename descclassname"><span class="pre">graphics.</span></span><span class="sig-name descname"><span class="pre">draw_mode_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clock</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/graphics.html#draw_mode_select"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#graphics.draw_mode_select" title="Link to this definition"></a></dt>
+<dd><p>Renderuje i obsługuje pętlę menu wyboru trybu głównego (Turniej / Szybka gra).</p>
+<dl class="simple">
+<dt>Zwraca:</dt><dd><p>Klucz wybranego trybu jako string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="graphics.draw_net">
+<span class="sig-prename descclassname"><span class="pre">graphics.</span></span><span class="sig-name descname"><span class="pre">draw_net</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/graphics.html#draw_net"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#graphics.draw_net" title="Link to this definition"></a></dt>
+<dd><p>Oblicza fizykę materiału i renderuje wielowarstwową siatkę tenisową, słupki oraz detale.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="graphics.draw_serve_indicator">
+<span class="sig-prename descclassname"><span class="pre">graphics.</span></span><span class="sig-name descname"><span class="pre">draw_serve_indicator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ball</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/graphics.html#draw_serve_indicator"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#graphics.draw_serve_indicator" title="Link to this definition"></a></dt>
+<dd><p>Rysuje animowany, kolorowy wskaźnik optymalnego momentu na serwis.</p>
+<dl class="simple">
+<dt>Parametry:</dt><dd><p>ball: Obiekt piłki potrzebny do odczytania aktualnej wysokości.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="graphics.draw_service_box">
+<span class="sig-prename descclassname"><span class="pre">graphics.</span></span><span class="sig-name descname"><span class="pre">draw_service_box</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/graphics.html#draw_service_box"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#graphics.draw_service_box" title="Link to this definition"></a></dt>
+<dd><p>Podświetla wizualnie strefę serwisu za pomocą przezroczystego koloru.</p>
+<dl class="simple">
+<dt>Parametry:</dt><dd><p>box: Krotka przechowująca granice docelowego pola.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="graphics.draw_shared_background">
+<span class="sig-prename descclassname"><span class="pre">graphics.</span></span><span class="sig-name descname"><span class="pre">draw_shared_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anim_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'green'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/graphics.html#draw_shared_background"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#graphics.draw_shared_background" title="Link to this definition"></a></dt>
+<dd><p>Rysuje uniwersalne tło we wszystkich menu (bądź awaryjną animację siatki w razie braku pliku).</p>
+<dl class="simple">
+<dt>Parametry:</dt><dd><p>screen: Powierzchnia rysowania.
+t: Czas w sekundach dla animacji.
+anim_type: Styl kolorystyczny animacji tła.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="graphics.draw_stat_bar">
+<span class="sig-prename descclassname"><span class="pre">graphics.</span></span><span class="sig-name descname"><span class="pre">draw_stat_bar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mxv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/graphics.html#draw_stat_bar"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#graphics.draw_stat_bar" title="Link to this definition"></a></dt>
+<dd><p>Rysuje poziomy pasek statystyk postaci.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="graphics.draw_tournament_bracket">
+<span class="sig-prename descclassname"><span class="pre">graphics.</span></span><span class="sig-name descname"><span class="pre">draw_tournament_bracket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clock</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">char_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_round_idx</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/graphics.html#draw_tournament_bracket"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#graphics.draw_tournament_bracket" title="Link to this definition"></a></dt>
+<dd><p>Rysuje wizualizację drabinki turniejowej przed każdym meczem.</p>
+<dl class="simple">
+<dt>Parametry:</dt><dd><p>results: Lista zawierająca historię dotychczasowych wyników rund w turnieju.
+current_round_idx: Liczba reprezentująca indeks obecnej rundy turniejowej.</p>
+</dd>
+<dt>Zwraca:</dt><dd><p>String akcji («PLAY» lub «MENU»).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="graphics.draw_tournament_champion">
+<span class="sig-prename descclassname"><span class="pre">graphics.</span></span><span class="sig-name descname"><span class="pre">draw_tournament_champion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clock</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">char_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/graphics.html#draw_tournament_champion"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#graphics.draw_tournament_champion" title="Link to this definition"></a></dt>
+<dd><p>Rysuje specjalny ekran końcowy wyświetlający złote trofeum i gratulacje po wygraniu mistrzostw.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="graphics.draw_tournament_eliminated">
+<span class="sig-prename descclassname"><span class="pre">graphics.</span></span><span class="sig-name descname"><span class="pre">draw_tournament_eliminated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clock</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">char_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eliminated_round_idx</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/graphics.html#draw_tournament_eliminated"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#graphics.draw_tournament_eliminated" title="Link to this definition"></a></dt>
+<dd><p>Rysuje specjalny ekran zakończenia po wyeliminowaniu gracza z drabinki.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="graphics.get_menu_background">
+<span class="sig-prename descclassname"><span class="pre">graphics.</span></span><span class="sig-name descname"><span class="pre">get_menu_background</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/graphics.html#get_menu_background"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#graphics.get_menu_background" title="Link to this definition"></a></dt>
+<dd><p>Wczytuje oraz zwraca obraz tła menu. Gwarantuje jednorazowe załadowanie obrazka.</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="entities.html" class="btn btn-neutral float-left" title="entities module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Poprzedni</a>
+        <a href="main.html" class="btn btn-neutral float-right" title="main module" accesskey="n" rel="next">Następny <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Prawa zastrzeżone 2026, Jakub Litwinski.</p>
+  </div>
+
+  Zbudowano w <a href="https://www.sphinx-doc.org/">Sphinx</a> używając
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    dostarczone przez <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
